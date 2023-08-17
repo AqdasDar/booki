@@ -3,8 +3,12 @@
     font-family: 'Raleway', sans-serif;
 }
 
-body ul {
+ ul {
     margin: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
 }
 
 :root {
@@ -48,8 +52,8 @@ body {
     background-color: white;
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    width: 369px;
-    height: 144px;
+    width:100%;
+    height: 25%;
 
 }
 
@@ -63,8 +67,9 @@ body {
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
 }
 
+
 .img-3 {
-    height: 100%;
+    height: 85%;
     width: 100%;
     border-radius: 20px 20px 0 0;
     object-fit: cover;
@@ -81,12 +86,10 @@ body {
 
 .card-titleV2 {
     font-size: 16px;
-    border-radius: 0px 0px 20px 20px;
-    background-color: white;
     width: 100%;
-    height: 50px;
-    text-align: center;
-    margin-top: 0px;
+    height: 15%;
+    padding: 10px;
+    margin: 10px;
 
 }
 
@@ -127,6 +130,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 10%;
 }
 
 .populaires-cards .card {
@@ -168,7 +172,9 @@ body {
 
 }
 
-
+.populaires-cards{
+    height: 90%;
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
@@ -191,6 +197,7 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
     }
 
     .populaires-cards .card {
@@ -215,12 +222,12 @@ body {
 #logo {
     width: 61px;
     height: 19px;
+    padding-top: 20px;
 }
 
-.header {
+.header-1 {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
 }
 
@@ -277,6 +284,7 @@ a:active {
 
 .header-nav-container {
     padding: 0 50px;
+    width: 20%;
 }
 
 .search-bar {
@@ -510,5 +518,26 @@ input::placeholder {
 
     .header {
         display: block;
+    }
+
+    .filtres {
+        flex-wrap: wrap;
+    }
+    .button {
+       width: 40%;
+        margin-bottom: 20px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+    #location {
+        width: 10%;
+    }
+    #search-bar {
+        width: 70%;
+    }
+    #search-button {
+        width: 20%;
     }
 }
