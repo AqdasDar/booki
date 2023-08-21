@@ -7,6 +7,10 @@ ul {
     margin: 0;
 }
 
+#filtre {
+    font-weight: bold;
+}
+
 body {
     margin: 0;
     padding: 0;
