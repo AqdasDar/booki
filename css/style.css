@@ -183,7 +183,7 @@ body {
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .hebergements {
@@ -217,6 +217,20 @@ body {
     .cardV2 {
         height: 270px;
         box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+    }
+
+    .img-3 {
+        height: 80%;
+    }
+
+    .card-titleV2 {
+        font-size: 14px;
+        height: 20%;
+        margin: 0;
+    }
+
+    .header-nav-container {
+        width: 45% !important;
     }
 }
 
@@ -302,12 +316,13 @@ a:active {
     outline: none;
     font-size: 16px;
     height: 97%;
-    padding: 0;
+    padding: 0 10px;
 }
 
 #location {
     height: 100%;
     width: 50px;
+    padding: 0 20px;
     background-color: var(--main-bg-color);
     border-radius: 10px 0 0 10px;
     display: flex;
@@ -453,7 +468,8 @@ footer {
 #search-button {
     background-color: #0065fc;
     color: #ffffff;
-    border-radius: 0 25px 25px 0;
+    border-radius: 0 15px 15px 0;
+    padding: 0 10px;
     font-size: 16px;
     cursor: pointer;
     border-style: none;
@@ -474,6 +490,10 @@ input::placeholder {
     align-items: center;
     padding: 0 0 25px;
 
+}
+
+#search {
+    display: none;
 }
 
 /* Small devices (phones, less than 768px) */
@@ -498,7 +518,7 @@ input::placeholder {
     }
 
     .header-nav-container {
-        width: 100%;
+        width: 100% !important;
         padding: 0 !important;
     }
 
@@ -516,7 +536,7 @@ input::placeholder {
     }
 
     .section {
-        padding: 0 0px;
+        padding: 0 20px;
     }
 
     .header {
@@ -561,6 +581,7 @@ input::placeholder {
         width: 100%;
         height: 160px;
         display: flex;
+        border: 5px solid white;
     }
 
     div article {
@@ -570,6 +591,7 @@ input::placeholder {
     .img {
         height: 100%;
         width: 40%;
+        border-radius: 20px 0px 0px 20px;
     }
 
     .populaires-cards {
@@ -605,7 +627,7 @@ input::placeholder {
     }
 
     .card-titleV2 {
-        padding: 0;
+        padding: 15px;
         height: 20%;
     }
 
@@ -613,4 +635,15 @@ input::placeholder {
         height: 80%;
     }
 
+    #search {
+        display: block;
+    }
+
+    .rechercher {
+        display: none;
+    }
+
+    .section-title {
+        margin: 0 0 20px 0;
+    }
 }
