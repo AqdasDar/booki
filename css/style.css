@@ -7,10 +7,6 @@ ul {
     margin: 0;
 }
 
-#filtre {
-    font-weight: bold;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -44,7 +40,9 @@ body {
 }
 
 .card-main {
-
+    background-color: white;
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     width: 30%;
     height: 250px;
 
@@ -67,7 +65,7 @@ body {
     width: 25%;
     height: 439px;
     margin-top: 20px;
-    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
 }
 
 
@@ -150,7 +148,7 @@ body {
 
 .populaires-cards .card-content {
     width: 67%;
-    padding-left: 15px;
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -185,7 +183,7 @@ body {
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .hebergements {
@@ -195,7 +193,6 @@ body {
     .populaires {
         width: 100%;
         margin-top: 50px;
-        margin-bottom: 50px;
     }
 
     .populaires-cards {
@@ -219,37 +216,11 @@ body {
 
     .cardV2 {
         height: 270px;
-        box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.10);
+        box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
     }
-
-    .img-3 {
-        height: 80%;
-    }
-
-    .card-titleV2 {
-        font-size: 14px;
-        height: 20%;
-        margin: 0;
-    }
-
-    .header-nav-container {
-        width: 45% !important;
-    }
-
-    .card {
-        height: 150px;
-    }
-
-
 }
-
-
-.cardV1 {
-    background-color: white;
-    border-radius: 20px;
-    border: 5px solid white;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    width: 100%;
+#search{
+display: none;
 }
 
 
@@ -318,7 +289,7 @@ a:active {
 
 .header-nav-container {
     padding: 0 50px;
-    width: 30%;
+    width: 20%;
 }
 
 .search-bar {
@@ -329,7 +300,8 @@ a:active {
 }
 
 #search-bar {
-    border-style: solid none;
+    border-style: solid none solid none;
+    border-color: #D9D9D9;
     border-width: 1px;
     outline: none;
     font-size: 16px;
@@ -340,7 +312,6 @@ a:active {
 #location {
     height: 100%;
     width: 50px;
-    padding: 0 20px;
     background-color: var(--main-bg-color);
     border-radius: 10px 0 0 10px;
     display: flex;
@@ -350,9 +321,9 @@ a:active {
 
 .filtres {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: space-between;
     margin-top: 20px;
+    font-weight: bold;
 }
 
 .m-15 {
@@ -395,7 +366,7 @@ a:active {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 30px;
 }
 
 .flexV2 {
@@ -453,7 +424,7 @@ a:active {
     color: #000;
 
     /* Title/Filter */
-    font-family: Raleway, sans-serif;
+    font-family: Raleway;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -486,8 +457,7 @@ footer {
 #search-button {
     background-color: #0065fc;
     color: #ffffff;
-    border-radius: 0 15px 15px 0;
-    padding: 0 10px;
+    border-radius: 0 25px 25px 0;
     font-size: 16px;
     cursor: pointer;
     border-style: none;
@@ -509,17 +479,21 @@ input::placeholder {
     padding: 0 0 25px;
 
 }
-
-#search {
-    display: none;
+#filtre{
+    font-weight: bold;
 }
+.button:hover {
+    background-color: #DEEBFF;
+    color: #0065fc;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 100%;
+}
+
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 768px) {
-    .hebergements-and-populaires {
-        flex-direction: column-reverse;
-    }
-
     /* ... */
     .header {
         flex-direction: column;
@@ -540,7 +514,7 @@ input::placeholder {
     }
 
     .header-nav-container {
-        width: 100% !important;
+        width: 100%;
         padding: 0 !important;
     }
 
@@ -570,25 +544,34 @@ input::placeholder {
     }
 
     .button {
-        width: 40%;
+        width: 49%;
         margin: 10px 0;
-        padding: 10px 15px;
+        padding: 10px 0 10px 5px;
+        box-sizing: border-box;
     }
 
     .search-bar {
         width: 100%;
+        border: 1px solid #F2F2F2;
+        border-radius: 10px 15px 15px 10px;
+        border-right: none;
+
+
     }
 
     #location {
-        width: 10%;
+        width: 15%;
+
     }
 
     #search-bar {
-        width: 70%;
+        width: 65%;
+        border : none;
     }
 
     #search-button {
         width: 20%;
+        border-radius: 15px;
     }
 
     .header-1 {
@@ -601,21 +584,21 @@ input::placeholder {
 
     .card-main {
         width: 100%;
-        height: 160px;
+        height: 192px;
         display: flex;
         border: 5px solid white;
         border-radius: 20px;
+
     }
 
-
     div article {
-        display: flex;
+        display: block;
+        width: 100%;
     }
 
     .img {
-        height: 100%;
-        width: 40%;
-        border-radius: 20px 0 0 20px;
+        height: 50%;
+        width: 100%;
     }
 
     .populaires-cards {
@@ -624,24 +607,27 @@ input::placeholder {
 
     .populaires-cards .card {
         width: 100%;
-        display: block;
-        height: 210px;
+        display: flex;
+        height: 145px;
+        border: white;
+        border-style: solid;
+        border-width: 5px;
+        border-radius: 20px;
     }
 
     .populaires-cards img {
-        width: 100%;
-        height: 60%;
-        border-radius: 20px 20px 0 0;
+        width: 33%;
+        height: 100%;
+        border-radius: 20px 0 0 20px;
         margin: 0;
     }
 
     .populaires-cards .card-content {
         width: 100% !important;
-        height: 40%;
-        justify-content: space-evenly;
+        height: 100%;
     }
 
-    .flexV2 {
+        .flexV2 {
         flex-direction: column;
     }
 
@@ -651,23 +637,18 @@ input::placeholder {
     }
 
     .card-titleV2 {
-        padding: 15px;
+        padding: 0;
         height: 20%;
     }
 
     .img-3 {
         height: 80%;
     }
-
-    #search {
+    .rechercher{
+        display: none;
+    }
+    #search{
         display: block;
     }
 
-    .rechercher {
-        display: none;
-    }
-
-    .section-title {
-        margin: 0 0 20px 0;
-    }
 }
