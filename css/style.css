@@ -89,7 +89,7 @@ body {
 
 .card-titleV2 {
     font-size: 16px;
-    margin: 15px 10px;
+    margin: 15px 20px;
 }
 
 
@@ -103,6 +103,10 @@ body {
 
 .ml-20 {
     margin-left: 20px;
+}
+
+.ml-35 {
+    margin-left: 35px;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -386,7 +390,6 @@ a:active {
 .flexV2 {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     gap: 30px;
 }
 
@@ -497,9 +500,12 @@ input::placeholder {
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 15px 0 25px;
 
+}
+
+.gap-10 {
+    gap: 10px;
 }
 
 #filtre {
@@ -529,7 +535,6 @@ nav ul a {
     }
 
     #logo {
-        padding: 30px;
         height: 19px;
     }
 
@@ -577,6 +582,8 @@ nav ul a {
         margin: 10px 0;
         padding: 10px 0 10px 5px;
         box-sizing: border-box;
+        display: flex;
+        justify-content: center;
     }
 
     .search-bar {
@@ -609,6 +616,7 @@ nav ul a {
 
     div.flex {
         flex-direction: column;
+        align-items: center;
     }
 
     .card-main {
@@ -616,7 +624,7 @@ nav ul a {
         display: block;
         border: 5px solid white;
         border-radius: 20px;
-
+        box-sizing: border-box;
     }
 
     div article {
@@ -630,11 +638,12 @@ nav ul a {
     }
 
     .populaires-cards {
-        display: block;
+        display: grid;
+        justify-content: center;
     }
 
     .populaires-cards .card {
-        width: 100%;
+        width: 100vw;
         display: flex;
         height: 145px;
         border: white;
@@ -642,6 +651,7 @@ nav ul a {
         border-width: 5px;
         border-radius: 20px;
         margin-bottom: 20px;
+        box-sizing: border-box;
     }
 
     .populaires-cards img {
@@ -658,11 +668,17 @@ nav ul a {
 
     .flexV2 {
         flex-direction: column;
+        align-items: center;
     }
 
     .cardV2 {
         width: 90%;
         display: block;
+        max-width: 500px;
+    }
+
+    article {
+        max-width: 500px!important;
     }
 
     .card-titleV2 {
@@ -683,6 +699,10 @@ nav ul a {
 
     .hebergements-and-populaires {
         flex-direction: column-reverse !important;
+    }
+
+    .hebergements {
+        background-color: white !important;
     }
 
 }
