@@ -256,14 +256,17 @@ body {
 
 }
 
+.nav {
+
+}
+
 ul {
     list-style: none;
 }
 
 li {
     display: inline-block;
-    margin-left: 20px;
-    padding-top: 10px;
+    width: 50%;
     border-top: 2px solid transparent;
 }
 
@@ -302,20 +305,24 @@ a:active {
 
 .header-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
 
 }
 
+.header-logo {
+    width: 50%;
+}
+
 .header-nav-container {
-    width: 35%;
+    width: 50%;
 }
 
 .search-bar {
     display: flex;
     align-items: center;
     height: 49px;
-    width: 377px;
+    width: 45%;
 }
 
 #search-bar {
@@ -326,11 +333,13 @@ a:active {
     font-size: 16px;
     height: 97%;
     padding: 0 10px;
+    box-sizing: border-box;
+    width: 50%;
 }
 
 #location {
     height: 100%;
-    width: 50px;
+    width: 15%;
     background-color: var(--main-bg-color);
     border-radius: 10px 0 0 10px;
     display: flex;
@@ -445,6 +454,10 @@ a:active {
     margin-bottom: 16px;
 }
 
+.card-flex {
+    display: flex;
+}
+
 .link {
     color: #000;
 
@@ -487,6 +500,7 @@ footer {
     cursor: pointer;
     border-style: none;
     height: 100%;
+    width: 35%;
 }
 
 input::placeholder {
@@ -503,6 +517,7 @@ input::placeholder {
     padding: 15px 0 25px;
 
 }
+
 
 .gap-10 {
     gap: 10px;
@@ -522,8 +537,9 @@ input::placeholder {
 }
 
 nav ul a {
-    width: 50%;
-    height: 100%;
+    display: block;
+    padding: 20px 0;
+
 }
 
 
@@ -532,6 +548,12 @@ nav ul a {
     /* ... */
     .header {
         flex-direction: column;
+    }
+
+    .header-logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     #logo {
@@ -621,10 +643,8 @@ nav ul a {
 
     .card-main {
         width: 100%;
-        display: block;
-        border: 5px solid white;
-        border-radius: 20px;
-        box-sizing: border-box;
+
+
     }
 
     div article {
@@ -643,13 +663,14 @@ nav ul a {
     }
 
     .populaires-cards .card {
-        width: 100vw;
+        width: 92vw;
         display: flex;
         height: 145px;
         border: 5px solid white;
         border-radius: 20px;
         margin-bottom: 20px;
         box-sizing: border-box;
+        max-width: 500px;
     }
 
     .populaires-cards img {
@@ -677,7 +698,12 @@ nav ul a {
     }
 
     article {
-        max-width: 500px!important;
+        max-width: 500px !important;
+    }
+
+    .card-main {
+        width: 100%;
+        max-width: 500px;
     }
 
     .card-titleV2 {
